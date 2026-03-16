@@ -3,74 +3,121 @@
 <html lang="fr">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VitaSportLab</title>
+<meta name="description" content="VitaSportLab - Technologie et science au service de la performance sportive">
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-<header>
+<header class="header">
+
+<div class="container">
 
 <div class="logo">VitaSportLab</div>
 
-<nav>
+<nav class="nav">
+
 <a href="#">Accueil</a>
 <a href="#about">À propos</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
-<div class="auth-buttons">
-<button class="login" onclick="openLogin()">Log In</button>
-<button class="signup" onclick="openSignup()">Sign Up</button>
+<div class="auth">
+
+<button class="btn login" onclick="openLogin()">Log In</button>
+<button class="btn signup" onclick="openSignup()">Sign Up</button>
+
+</div>
+
 </div>
 
 </header>
 
 
+
 <section class="hero">
 
-<h1>Bienvenue chez VitaSportLab</h1>
-<p>Nous développons des solutions innovantes pour améliorer la performance sportive grâce à la technologie et à la science.</p>
+<div class="hero-content">
+
+<h1>Optimisez votre performance sportive</h1>
+
+<p>VitaSportLab développe des technologies innovantes pour améliorer l'entraînement, l'analyse de performance et la science du sport.</p>
+
+</div>
 
 </section>
+
 
 
 <section class="section" id="about">
 
-<h2>À propos de nous</h2>
-<p>VitaSportLab est une startup spécialisée dans l'analyse de la performance sportive, la technologie et la science du sport.</p>
+<div class="container">
+
+<h2>À propos de VitaSportLab</h2>
+
+<p>
+Notre startup combine science du sport, intelligence des données et technologie
+pour aider les athlètes et les coachs à atteindre leur meilleur niveau.
+</p>
+
+</div>
 
 </section>
 
 
-<section class="section" id="services">
+
+<section class="section services" id="services">
+
+<div class="container">
 
 <h2>Nos Services</h2>
 
 <div class="cards">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="analyse sportive">
+
 <h3>Analyse de performance</h3>
-<p>Analyse des données sportives pour améliorer les performances.</p>
+
+<p>Analyse avancée des données sportives pour optimiser les performances.</p>
+
 </div>
 
+
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74">
+
+<img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74" alt="technologie sportive">
+
 <h3>Technologie sportive</h3>
-<p>Développement d'outils digitaux pour les athlètes et les coachs.</p>
+
+<p>Outils digitaux innovants pour athlètes et entraîneurs.</p>
+
 </div>
 
+
+
 <div class="card">
-<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b">
+
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="science du sport">
+
 <h3>Science du sport</h3>
-<p>Recherche et innovation pour optimiser l'entraînement.</p>
+
+<p>Recherche scientifique pour améliorer les programmes d'entraînement.</p>
+
+</div>
+
 </div>
 
 </div>
@@ -78,54 +125,65 @@
 </section>
 
 
-<section class="section" id="contact">
+
+<section class="section contact" id="contact">
+
+<div class="container">
 
 <h2>Contact</h2>
+
 <p>Email : contact@vitasportlab.com</p>
+
+</div>
 
 </section>
 
 
-<footer>
 
-<p>© 2026 VitaSportLab - Tous droits réservés</p>
+<footer class="footer">
+
+<p>© 2026 VitaSportLab — Tous droits réservés</p>
 
 </footer>
 
 
 
+<!-- LOGIN MODAL -->
+
 <div class="modal" id="loginModal">
 
-<div class="modal-content">
+<div class="modal-box">
 
 <span class="close" onclick="closeModal()">&times;</span>
 
-<h2>Log In</h2>
+<h2>Connexion</h2>
 
 <input type="email" placeholder="Email">
-<input type="password" placeholder="Password">
+<input type="password" placeholder="Mot de passe">
 
-<button>Se connecter</button>
-
-</div>
+<button class="btn signup">Se connecter</button>
 
 </div>
 
+</div>
 
+
+
+<!-- SIGNUP MODAL -->
 
 <div class="modal" id="signupModal">
 
-<div class="modal-content">
+<div class="modal-box">
 
 <span class="close" onclick="closeModal()">&times;</span>
 
-<h2>Sign Up</h2>
+<h2>Créer un compte</h2>
 
 <input type="text" placeholder="Nom">
 <input type="email" placeholder="Email">
-<input type="password" placeholder="Password">
+<input type="password" placeholder="Mot de passe">
 
-<button>Créer un compte</button>
+<button class="btn signup">Créer un compte</button>
 
 </div>
 
@@ -136,19 +194,20 @@
 <script>
 
 function openLogin(){
-document.getElementById("loginModal").style.display="flex";
+document.getElementById("loginModal").style.display="flex"
 }
 
 function openSignup(){
-document.getElementById("signupModal").style.display="flex";
+document.getElementById("signupModal").style.display="flex"
 }
 
 function closeModal(){
-document.getElementById("loginModal").style.display="none";
-document.getElementById("signupModal").style.display="none";
+document.getElementById("loginModal").style.display="none"
+document.getElementById("signupModal").style.display="none"
 }
 
 </script>
+
 
 </body>
 </html>
