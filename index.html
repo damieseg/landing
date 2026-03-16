@@ -1,0 +1,160 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Startup Website</title>
+
+<!-- Lien vers le fichier CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">MyStartup</div>
+
+<nav>
+<a href="#">Accueil</a>
+<a href="#about">À propos</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="auth-buttons">
+<button class="login" onclick="openLogin()">Log In</button>
+<button class="signup" onclick="openSignup()">Sign Up</button>
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Construisons le futur</h1>
+<p>Notre startup développe des solutions innovantes pour simplifier le monde digital.</p>
+
+</section>
+
+
+<section class="section" id="about">
+
+<h2>À propos</h2>
+<p>Nous sommes une startup spécialisée dans la technologie et l'innovation.</p>
+
+</section>
+
+
+<section class="section" id="services">
+
+<h2>Nos Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="service1.jpg">
+<h3>Innovation</h3>
+<p>Solutions technologiques modernes.</p>
+</div>
+
+<div class="card">
+<img src="service2.jpg">
+<h3>Développement</h3>
+<p>Applications web et mobiles.</p>
+</div>
+
+<div class="card">
+<img src="service3.jpg">
+<h3>Data</h3>
+<p>Analyse et intelligence des données.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="contact">
+
+<h2>Contact</h2>
+<p>Email : contact@startup.com</p>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 MyStartup - Tous droits réservés</p>
+
+</footer>
+
+
+
+<!-- LOGIN -->
+
+<div class="modal" id="loginModal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h2>Log In</h2>
+
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<button>Se connecter</button>
+
+</div>
+
+</div>
+
+
+
+<!-- SIGN UP -->
+
+<div class="modal" id="signupModal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<h2>Sign Up</h2>
+
+<input type="text" placeholder="Nom">
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<button>Créer un compte</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function openLogin(){
+document.getElementById("loginModal").style.display="flex";
+}
+
+function openSignup(){
+document.getElementById("signupModal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("loginModal").style.display="none";
+document.getElementById("signupModal").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
+```
